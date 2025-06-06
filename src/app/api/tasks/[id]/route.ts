@@ -25,6 +25,13 @@ export async function PUT(req: Request, context: { params: { id: string } }) {
   return NextResponse.json(updated);
 }
 
+
+
+// The first argument to any route handler (like GET, POST, PUT, DELETE) in Next.js is always the Request object.
+
+// If you don’t need to use it, it’s still required by the function signature, so it must be listed.
+
+
 export async function DELETE(_: Request, context: { params: { id: string } }) {
   await connectDB();
   const { id } = context.params;
@@ -42,13 +49,10 @@ export async function DELETE(_: Request, context: { params: { id: string } }) {
 export async function GET(_: Request, context:  { params: { id: string } }) {
   await connectDB();
   const { id } = context.params;
-
-
     const task = await TaskModel.findById(id);
     if (!task) {
       return NextResponse.json({ error: "Task not found" }, { status: 404 });
     }
     return NextResponse.json(task, { status: 200 });
-  
   }
 

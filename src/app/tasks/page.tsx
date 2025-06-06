@@ -30,7 +30,7 @@ function DisplayAllTaskpage() {
 
   return (
     <div className="flex justify-center items-center mt-20">
-      <div className="flex flex-col justify-center items-center gap-4 bg-cyan-400/40 px-10 py-6 rounded-2xl ">
+      <div className="flex flex-col justify-center items-center gap-4 bg-purple-400/40 px-10 py-6 rounded-2xl ">
         <h1 className="text-2xl font-semibold text-white">TASKS</h1>
 
         {alltasks.length === 0 ? (

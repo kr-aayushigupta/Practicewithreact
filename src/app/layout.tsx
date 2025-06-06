@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased mx-auto h-screen bg-[url('/bg4.jpg')] bg-cover bg-center`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased mx-auto h-screen bg-[url('/bg5.jpg')] bg-cover bg-center`}
       >
         <Toaster position="bottom-right"/>
         <Navbar/>
