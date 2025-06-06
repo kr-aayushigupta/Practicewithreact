@@ -3,7 +3,7 @@
 "use client";
 
 import TaskForm from "@/components/TaskForm";
-
+import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
 
 import React from "react";
@@ -25,9 +25,11 @@ function Addnewtaskpage() {
     });
 
     if (res.ok) {
+        toast.success("Task Added Successfully")
       console.log("Task added successfully");
       router.push("/tasks");
     } else {
+        toast.error("Failed to Add the Task")
       console.log("Error in adding the new Task - response is not ok");
     }
   };
