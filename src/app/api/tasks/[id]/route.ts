@@ -43,13 +43,12 @@ export async function GET(_: Request, context:  { params: { id: string } }) {
   await connectDB();
   const { id } = context.params;
 
-  try {
+
     const task = await TaskModel.findById(id);
     if (!task) {
       return NextResponse.json({ error: "Task not found" }, { status: 404 });
     }
     return NextResponse.json(task, { status: 200 });
-  } catch (err) {
-    return NextResponse.json({ error: "Invalid ID" }, { status: 400 });
+  
   }
-}
+

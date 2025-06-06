@@ -4,30 +4,21 @@ import { Input } from "@/components/ui/input";
 import { Button } from "./ui/button";
 import { useState } from "react";
 
-type TaskProps={
-    onSubmit: (data: { task: string; description: string; status: string;}) => void;
+type TaskProps = {
+  onSubmit: (data: {
+    task: string;
+    description: string;
+    status: string;
+  }) => void;
 };
 
-
-
-// To add new data of new task - this form should be visible
-function TaskForm( {onSubmit} : TaskProps ) {
+function TaskForm({ onSubmit }: TaskProps) {
   const [task, settask] = useState("");
   const [description, setdescription] = useState("");
   const [status, setstatus] = useState("");
 
   const handleaddnewtask = async () => {
-    // const payload={
-    //     newtask,
-    //     description,
-    //     status
-    // }
-    // try{
-    //     const res=await fetch("/app/api/tasks")
-    // }catch(e){
-    // }
-
-    onSubmit({task,description,status});
+    onSubmit({ task, description, status });
     settask("");
     setdescription("");
     setstatus("");

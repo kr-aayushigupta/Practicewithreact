@@ -37,9 +37,6 @@ function TaskEditForm({
       status: status,
     };
     onUpdateSubmit(taskobj);
-    // settask("");
-    // setdescription("");
-    // setstatus("");
   };
 
   const handledeletetask = () => {
@@ -50,9 +47,6 @@ function TaskEditForm({
       status: status,
     };
     onDeleteSubmit(taskobj);
-    // settask("");
-    // setdescription("");
-    // setstatus("");
   };
 
   return (
