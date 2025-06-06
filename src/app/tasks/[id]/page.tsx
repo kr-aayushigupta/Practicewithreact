@@ -92,8 +92,8 @@ const fetchinitialtask = async () => {
   
 
   return (
-    <div className="max-w-xl mx-auto p-6">
-        <h1 className="text-xl font-bold mb-4">Edit Task</h1>
+    <div className="max-w-xl mx-auto mt-30 bg-white px-4 py-2">
+      <h1 className="text-xl font-bold mb-4 text-center">Edit the Task</h1>
       <TaskEditForm
         initialdata={initialtask}
         onDeleteSubmit={handleDeleteTask}

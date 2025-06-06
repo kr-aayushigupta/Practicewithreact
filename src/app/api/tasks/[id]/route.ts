@@ -5,14 +5,15 @@ import { connectDB } from "@/lib/mongodb";
 import TaskModel from "@/models/Task";
 
 
-export async function PUT(req:Request , {params}:{params:{id:string}}){
+export async function PUT(req:Request , context:{params:{id:string}}){
 
 
     await connectDB();
+    const { id } = context.params;
     const body=await req.json();
 
     const updated=await TaskModel.findByIdAndUpdate(
-        params.id,{
+        id,{
             task:body.task,
             description:body.description,
             status:body.status,
@@ -29,10 +30,11 @@ export async function PUT(req:Request , {params}:{params:{id:string}}){
 
 
 
-export async function DELETE(_:Request,{params}:{params:{id:string}}){
+export async function DELETE(_:Request, context:{params:{id:string}}){
 
     await connectDB();
-    const deleted=await TaskModel.findByIdAndDelete(params.id)
+    const { id } = context.params;
+    const deleted=await TaskModel.findByIdAndDelete(id)
 
     if(!deleted){
         return NextResponse.json({error:"Task not found in DB to delete"},{status:404})

@@ -34,7 +34,7 @@ function TaskForm( {onSubmit} : TaskProps ) {
   };
 
   return (
-    <div>
+    <div className="flex flex-col gap-4 ">
       <Input
         type="text"
         placeholder="New Task"
