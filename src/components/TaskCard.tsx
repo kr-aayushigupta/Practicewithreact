@@ -17,7 +17,7 @@ export default function TaskCard({
   onUpdateSubmit,
 }: TaskCardProps) {
   return (
-    <div className="border p-4 rounded shadow bg-white/40">
+    <div className="border p-4 rounded shadow bg-white">
       <h2 className="text-lg font-bold">Task: {initialData.task}</h2>
       <p className="text-sm text-gray-600">
         Description: {initialData.description}
@@ -26,7 +26,7 @@ export default function TaskCard({
       <div className="mt-3 flex flex-between gap-2">
         <Button
           onClick={onUpdateSubmit}
-          className="bg-green-500 text-white px-2 py-1 rounded"
+          className="bg-purple-500 text-white px-2 py-1 rounded"
         >
           Edit
         </Button>

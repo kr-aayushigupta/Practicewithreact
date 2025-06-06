@@ -80,7 +80,7 @@ function TaskEditForm({
       ></Input>
       <div className="flex justify-around gap-4">
         <Button
-          className="bg-green-600 hover:bg-green-700 hover:cursor-pointer"
+          className="bg-purple-600 hover:bg-purple-700 hover:cursor-pointer"
           onClick={handleedittask}
         >
           Update Task

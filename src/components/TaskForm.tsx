@@ -55,7 +55,7 @@ function TaskForm({ onSubmit }: TaskProps) {
       ></Input>
 
       <Button
-        className="bg-green-600 hover:bg-green-700 hover:cursor-pointer"
+        className="bg-purple-600 hover:bg-purple-700 hover:cursor-pointer"
         onClick={handleaddnewtask}
       >
         Add Task
